@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --amarillo: #EAC926;
+    --azul: #02a;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    --blanco: #FFFFFF;
+    /*Font Family*/
+    --roboto: 'Roboto', sans-serif;
+    /*Font Sizes*/
+    --text: 12px;
+    --title: 24px;
+    --text-lg: 18px;
+    --text-md: 16px;
+}
+
+/*Estilos globales*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--roboto);
+    background-color: var(--gris-claro);
+}
+
+h3 {
+    font-size: var(--title);
+}
+
+p {
+    font-size: var(--text);
+}
+img {
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+/*Header*/
+
+header {
+    background-color: var(--amarillo);
+}
+
+header .top-header {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+}
+
+header .logo {
+    width: 42%;
+    display: block;
+}
+
+header .logo img {
+    width: 100%;
+    max-width: 250px;
+}
+
+header .top-header .form {
+    width: 42%;
+    display: flex;
+    flex-direction: row;
+}
+
+header .top-header .form button {
+    padding: 8px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+header .top-header .form input {
+    padding: 8px;
+    border:none;
+    border-radius: 5px 0px 0px 5px;
+    flex-grow: 1;
+}
+
+header .top-header .form input:focus {
+    outline: none;
+}
+
+.fa fa-search {
+    padding: 10px;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+}
+
+header .top-header p {
+    flex-grow: 1;
+    text-align: center;
+}
+
+header nav {
+    font-size: var(--text-md);
+    display: none;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.burger-menu {
+    text-align: center;
+}
+
+.burger-menu i {
+    background-color: var(--celeste);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    padding: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+/* MAIN */
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article {
+    margin: 1rem 0;
+    background-color: #FFF;
+    max-width: 98%;
+}
+
+main section .products {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+main section article .product-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    border-top: 2px solid var(--gris-claro);
+    padding: 1.5rem 1.5rem 1rem;
+    position: relative;
+    
+}
+
+.price {
+    font-size: var(--text-md);
+    font-weight: bold;
+    width: 30%;
+}
+
+.discount {
+    font-size: var(--text-md);
+    width: 70%;
+    color: var(--verde);
+}
+
+main section article i{
+    display: block;
+    color: var(--verde);
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--verde);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 0.3s ease;
+}
+
+
+.description {
+    color: var(--gris-oscuro);
+    display: none;
+    margin: 0.5rem 0;
+}
+
+.discount, .description {
+    font-size: var(--text-md);
+}
+
+/*LOGIN*/
+.login, .register {
+    background-color: var(--gris-claro);
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login form input {
+    padding: 1rem;
+    margin: 2rem 1rem;
+    border-radius: 5px;
+}
+
+/*REGISTER*/
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--text-md);
+}
+
+.register form input {
+    padding: 1rem;
+    margin: 2rem 1rem;
+    border-radius: 5px;
+}
+
+.register .profile{
+    display: flex;
+    justify-content: space-around;
+}
+
+.register .interests{
+    display: flex;
+    flex-direction: column;
+}
+
+/*BOTON*/
+
+.button {
+    color: white;
+    background-color: var(--celeste);
+    border: var(--celeste);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.register .botones {
+    display: flex;
+    flex-direction: column;
+}
+
+.register .button {
+    width: 90%;
+}
+
+/* FOOTER*/
+
+footer {
+    background-color: white;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer div section, footer section {
+    
+    color: var(--gris-oscuro);
+    padding: 0.5rem 3rem;
+}
+
+footer div section {
+    text-align: center;
+}
+
+footer .fas {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--celeste);
+}
+
+
+/* RESPONSIVE */
+
+
+@media (min-width: 361px) {
+    header .logo {
+        max-width: 250px;
+    }
+    header .top-header .form {
+        flex-grow: 2;
+    }
+    main section article {
+        max-width: 45%;
+    }
+    main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+    }
+    .description {
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+    }
+    main section article:hover .description {
+        opacity: 1;
+    }
+    main section article:hover i {
+        transform: rotate(-90deg);
+    }
+    header nav {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav ul {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        gap: 2rem;
+    }
+    header nav ul li {
+        padding: 5px;
+    }
+    .burger-menu {
+        display: none;
+    }
+    main section .products {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .login form, .register form {
+        max-width: 580px;
+        margin: auto;
+    }
+    .register .interests{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .register .botones {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .register .button {
+        width: 50%;
+    }
+    .button:hover {
+    background-color: var(--azul);
+    }
+    footer div {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    footer .fas:hover {
+        color: var(--azul);
+    }
+}
+
+@media (min-width: 769px) {
+    header .top-header .form {
+        width: 30%;
+    }
+    main section article {
+        max-width: 22%;
+    }
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .login form input {
+        margin: 2rem 4rem;
+    }
+}
